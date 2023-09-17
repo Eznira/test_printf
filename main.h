@@ -32,7 +32,8 @@ int print_unsigned_decimal(va_list args);
 int print_octal(va_list args);
 int _print_lower_hex(va_list args);
 int _print_upper_hex(va_list args);
-int _print_rev(char *a);
+void _print_rev_helper(char *a);
 int _strlen(char *a);
+int _print_rev(va_list args);
 
 #endif /* MAIN_H */

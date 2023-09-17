@@ -7,26 +7,41 @@
  */
 int _strlen(char *a)
 {
-	int len;
+	int len = 0;
 
-	while (a)
+	for(; *a != '\0'; a++)
 		len++;
+
 	return (len);
 }
 /**
- * _print_rev - Prints out a string in reversed order to the
+ * _print_rev_helper - Prints out a string in reversed order to the
  *             standard output, recursibely.
  * @a: The pointer to the string.
  *
  * Return: number of printed char.
  */
-int _print_rev(char *a)
+void _print_rev_helper(char *a)
 {
 	if (*a == '\0')
 	{
-		return (_strlen(a));
+		return;
 	}
 
-	_print_rev(a + 1);
+	_print_rev_helper(a + 1);
 	_putchar(*a);
+}
+
+/**
+ * _print_rev - Prints out a string in reversed order to the
+ *             standard output.
+ * @args: The list struct holding the string.
+ *
+ * Return: number of printed char.
+ */
+int _print_rev(va_list args)
+{
+	char *s = va_arg(args, char *);
+	_print_rev_helper(s);
+	return (_strlen(s));
 }

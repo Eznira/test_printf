@@ -15,8 +15,10 @@ typedef struct placeholder_struct
 	char placeholder_id;
 	int (*print_type)(va_list);
 } placeholder_struct_t;
+
 extern const placeholder_struct_t placeholder_map[];
 extern const int placeholder_map_size;
+
 int _putchar(char c);
 int _printf(const char *str, ...);
 int print_char(va_list args);
@@ -30,4 +32,7 @@ int print_unsigned_decimal(va_list args);
 int print_octal(va_list args);
 int _print_lower_hex(va_list args);
 int _print_upper_hex(va_list args);
+int _print_rev(char *a);
+int _strlen(char *a);
+
 #endif /* MAIN_H */

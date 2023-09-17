@@ -9,7 +9,7 @@ int _strlen(char *a)
 {
 	int len = 0;
 
-	for(; *a != '\0'; a++)
+	for ( ; *a != '\0'; a++)
 		len++;
 
 	return (len);
@@ -41,7 +41,9 @@ void _print_rev_helper(char *a)
  */
 int _print_rev(va_list args)
 {
-	char *s = va_arg(args, char *);
+	char *s;
+
+	s = va_arg(args, char *);
 	_print_rev_helper(s);
 	return (_strlen(s));
 }

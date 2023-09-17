@@ -3,7 +3,6 @@
 /**
  * _printf - Custom implementation of printf function.
  * @str: The format string.
- * @arg_list: A va_list of arguments.
  *
  * Return: The number of characters printed.
  */

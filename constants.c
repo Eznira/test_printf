@@ -1,6 +1,6 @@
 #include "main.h"
 
-const placeholder_struct_t placeholder_map[] = {
+const conv_specifier_struct_t conv_specifier_map[] = {
 	{'c', print_char},
 	{'s', print_string},
 	{'%', print_percent},
@@ -14,5 +14,5 @@ const placeholder_struct_t placeholder_map[] = {
 	{'r', _print_rev},
 };
 
-const int placeholder_map_size = sizeof(placeholder_map)
-	/ sizeof(placeholder_map[0]);
+const int conv_specifier_map_size = sizeof(conv_specifier_map)
+	/ sizeof(conv_specifier_map[0]);

@@ -20,12 +20,12 @@ int _printf(const char *str, ...)
 		{
 			str++;
 
-			for (i = 0; i < placeholder_map_size; i++)
+			for (i = 0; i < conv_specifier_map_size; i++)
 			{
-				if (*str == placeholder_map[i].placeholder_id)
+				if (*str == conv_specifier_map[i].conv_specifier)
 				{
-					count_char += placeholder_map[i].
-						print_type(arg_list);
+					count_char += conv_specifier_map[i].
+						print_conv(arg_list);
 						break;
 				}
 			}

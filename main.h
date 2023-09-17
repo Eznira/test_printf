@@ -10,14 +10,14 @@
  * @placeholder_id: The placeholder character.
  * @print_type:     The corresponding print function.
  */
-typedef struct placeholder_struct
+typedef struct conv_specifier_struct
 {
-	char placeholder_id;
-	int (*print_type)(va_list);
-} placeholder_struct_t;
+	char conv_specifier;
+	int (*print_conv)(va_list);
+} conv_specifier_struct_t;
 
-extern const placeholder_struct_t placeholder_map[];
-extern const int placeholder_map_size;
+extern const conv_specifier_struct_t conv_specifier_map[];
+extern const int conv_specifier_map_size;
 
 int _putchar(char c);
 int _printf(const char *str, ...);
